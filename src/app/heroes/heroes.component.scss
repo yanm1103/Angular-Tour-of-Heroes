@@ -1,0 +1,28 @@
+img {
+    max-width: 100%;
+    border: 1px solid red;
+}
+
+.heroDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.heroCard {
+    padding: 20px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid red;
+}
+
+.heroHeader {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.heroInfo {
+    text-align: end;
+}

@@ -1,0 +1,13 @@
+<div class="heroDiv">
+    <div class="heroCard" *ngFor="let hero of heroList">
+        <div class="heroHeader">
+            <h1>{{hero.name | uppercase}}</h1>
+            <div class="heroInfo">
+                <p>{{hero.power}}</p>
+                <p>{{hero.age}} years old</p>
+            </div>
+        </div>
+        <img src="{{hero.imageURL}}">
+        <p>Born {{formatDate(hero.birthdate)}}</p>
+    </div>
+</div>
