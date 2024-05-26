@@ -1,13 +1,59 @@
 <div class="heroDiv">
-    <div class="heroCard" *ngFor="let hero of heroList">
-        <div class="heroHeader">
-            <h1>{{hero.name | uppercase}}</h1>
-            <div class="heroInfo">
-                <p>{{hero.power}}</p>
-                <p>{{hero.age}} years old</p>
+    <mat-card *ngFor="let hero of heroList">
+        <mat-card-content>
+            <div class="heroHeader">
+                <h1>{{hero.name | uppercase}}</h1>
+                <div class="heroInfo">
+                    <p *ngIf="hero.power">{{hero.power}}</p>
+                    <p *ngIf="!hero.power">Poderes desconhecidos</p>
+                    <p *ngIf="hero.age">{{hero.age}} ano{{hero.age > 1 ? 's': ''}}</p>
+                    <p *ngIf="!hero.age">Idade desconhecida</p>
+                    <p>{{hero.birthdate ? 'Nascido ' + formatDate(hero.birthdate) : 'Data de nascimento desconhecida'}}</p>
+                </div>
             </div>
-        </div>
-        <img src="{{hero.imageURL}}">
-        <p>Born {{formatDate(hero.birthdate)}}</p>
-    </div>
+            <img *ngIf="!editModeArray[hero.id]" src="{{hero.imageURL}}">
+            <div *ngIf="editModeArray[hero.id]" class="editModeBox">
+                <form class="form" name="editMode">
+                    <h2>Modo de edição de herói</h2>
+                    <mat-form-field class="full-width">
+                        <mat-label>Nome de herói</mat-label>
+                        <input matInput id="heroName" name="heroName" [(ngModel)]="hero.name"
+                            placeholder="Nome de herói" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Idade</mat-label>
+                        <input matInput id="heroAge" type="number" name="heroAge" [(ngModel)]="hero.age"
+                            placeholder="Idade do herói" />
+                    </mat-form-field>
+                    <mat-form-field *ngIf="!unknownBirthCheckbox.checked">
+                        <mat-label>Data de nascimento</mat-label>
+                        <input matInput [matDatepicker]="picker" id="heroBirthdate" name="heroBirthdate"
+                            [(ngModel)]="hero.birthdate" placeholder="Data de nascimento do herói" />
+                        <mat-hint>DD/MM/AAAA</mat-hint>
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                    <mat-checkbox #unknownBirthCheckbox
+                        (change)="unknownBirthToggle(hero.id, unknownBirthCheckbox.checked)">Data de nascimento
+                        desconhecida</mat-checkbox>
+                    <mat-form-field class="full-width">
+                        <mat-label>Superpoderes</mat-label>
+                        <textarea matInput id="heroPower" name="heroPower" [(ngModel)]="hero.power"
+                            placeholder="Superpoderes do herói"></textarea>
+                    </mat-form-field>
+                    <div class="space-between">
+                        <button mat-flat-button color="primary">
+                            <mat-icon fontIcon="save"></mat-icon>
+                            Salvar herói
+                        </button>
+                        <button mat-flat-button color="warn">
+                            <mat-icon fontIcon="delete"></mat-icon>
+                            Deletar herói
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <mat-checkbox [(ngModel)]="editModeArray[hero.id]">Modo de edição de herói</mat-checkbox>
+        </mat-card-content>
+    </mat-card>
 </div>
