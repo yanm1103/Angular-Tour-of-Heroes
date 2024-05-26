@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Project images while still in production
 
 ### Lesson 1 - The hero editor
-![Lesson 1 image](https://imgur.com/yAjROyv)
+![Lesson 1 image](https://i.imgur.com/yAjROyv.png)
 
 ## Development server
 
