@@ -7,6 +7,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ### Lesson 1 - The hero editor
 ![Lesson 1 image](https://i.imgur.com/yAjROyv.png)
 
+### Lesson 2 - Display a List
+In this lesson I already implemented Bootstrap to help with the responsive design, and instead of using a list I opted for using a select, since I find it more pleasing.
+
+![Lesson 2 image](https://github.com/yanm1103/Angular-Tour-of-Heroes/assets/28579030/9afb4e7f-8a51-48ec-baff-9047152b7eff)
+
+![Lesson 2 image mobile](https://github.com/yanm1103/Angular-Tour-of-Heroes/assets/28579030/490b086d-1438-4158-8e8f-b42c0f5344c8)
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
