@@ -1,5 +1,7 @@
 # Angular Tour Of Heroes (Developed in pt-BR)
 
+![logo](https://github.com/yanm1103/Angular-Tour-of-Heroes/assets/28579030/6139ab5e-150f-44e1-a3e4-071f988002ec)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
 
 ## Project images while still in production
