@@ -2,7 +2,9 @@
 
 ![logo](https://github.com/yanm1103/Angular-Tour-of-Heroes/assets/28579030/6139ab5e-150f-44e1-a3e4-071f988002ec)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
+This is just a following of [Angular's tutorial](https://v17.angular.io/tutorial/tour-of-heroes) on creating a simple app.
+
+Generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
 
 ## Project images while still in production
 
