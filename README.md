@@ -1,11 +1,23 @@
 # Angular Tour Of Heroes (Developed in pt-BR)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
+![logo](https://github.com/yanm1103/Angular-Tour-of-Heroes/assets/28579030/6139ab5e-150f-44e1-a3e4-071f988002ec)
+
+This is just a following of [Angular's tutorial](https://v17.angular.io/tutorial/tour-of-heroes) on creating a simple app.
+
+Generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
 
 ## Project images while still in production
 
-### Lesson 1 - The hero editor
-![Lesson 1 image](https://i.imgur.com/yAjROyv.png)
+### Lesson 4 - Add services
+Even though this lesson is about services, I've decided to improve the visual of things a bit
+
+![Lesson 4 image](https://github.com/yanm1103/Angular-Tour-of-Heroes/assets/28579030/e9f4e374-b5a5-4ab0-80c6-071f56fe1076)
+
+![Lesson 4 notifications](https://github.com/yanm1103/Angular-Tour-of-Heroes/assets/28579030/21f4ecb3-f58c-443d-97d6-eb611914efdd)
+
+
+### Lesson 3 - Create a feature component
+This lesson just separates components, so no visual difference. Heroes component was divided into Heroes and HeroDetail
 
 ### Lesson 2 - Display a List
 In this lesson I already implemented Bootstrap to help with the responsive design, and instead of using a list I opted for using a select, since I find it more pleasing.
@@ -14,9 +26,8 @@ In this lesson I already implemented Bootstrap to help with the responsive desig
 
 ![Lesson 2 image mobile](https://github.com/yanm1103/Angular-Tour-of-Heroes/assets/28579030/490b086d-1438-4158-8e8f-b42c0f5344c8)
 
-### Lesson 3 - Create a feature component
-This lesson just separates components, so no visual difference. Heroes component was divided into Heroes and HeroDetail
-
+### Lesson 1 - The hero editor
+![Lesson 1 image](https://i.imgur.com/yAjROyv.png)
 
 ## Development server
 
