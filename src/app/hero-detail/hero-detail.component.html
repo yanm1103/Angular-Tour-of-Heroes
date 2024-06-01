@@ -2,10 +2,10 @@
     <mat-card class="col-sm-3">
         <mat-card-content>
             <div class="row">
-                <div class="col-6">
-                    <h1>{{selectedHero.name | uppercase}}</h1>
+                <div class="col-9">
+                    <h1 class="text-truncate">{{selectedHero.name | uppercase}}</h1>
                 </div>
-                <div class="col-6 text-end">
+                <div class="col-3 text-end">
                     <span>{{formatAge(selectedHero.age)}}</span>
                     <br>
                     <span>{{formatDate(selectedHero.birthdate)}}</span>

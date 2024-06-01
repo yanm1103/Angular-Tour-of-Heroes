@@ -11,7 +11,8 @@ import { MatSelectModule } from '@angular/material/select';
 
 import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
 
-import { HEROES } from '../mock-heroes';
+import { HeroService } from '../hero.service';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-heroes',
@@ -22,12 +23,22 @@ import { HEROES } from '../mock-heroes';
   styleUrl: './heroes.component.scss'
 })
 export class HeroesComponent {
-  heroList: Array<Hero> = HEROES;
+  heroList: Array<Hero> = [];
+
+  constructor(private heroService: HeroService, public messageService: MessageService) {}
+
+  ngOnInit(): void {
+    this.getHeroes();
+  }
 
   selectedHero?: Hero;
 
+  getHeroes(): void {
+    this.heroService.getHeroes().subscribe(heroList => this.heroList = heroList);
+  }
+
   onSelect(hero: Hero): void {
-    console.log(hero);
+    this.messageService.add(`Abriu herói ${hero.name}`);
     this.selectedHero = hero;
   }
 }

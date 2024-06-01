@@ -1,0 +1,29 @@
+<button mat-icon-button [matMenuTriggerFor]="menu" [disabled]="!messageService.messages.length">
+    <mat-icon aria-hidden="false" aria-label="Notifications" fontIcon="notifications"
+        [matBadge]="messageService.messages.length > 0 ? messageService.messages.length : null"
+        [matBadgeHidden]="!messageService.messages.length"></mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+    <h5 class="ps-3 pt-2">Notificações ({{messageService.messages.length}})</h5>
+    <hr>
+    <button class="pe-1" mat-menu-item *ngFor='let message of messageService.messages; let i = index'
+        (click)="messageService.remove(i, $event)">
+        <div class="d-flex align-items-center justify-content-between">
+            <span>{{message}}</span>
+            <mat-icon class="me-0" aria-hidden="false" aria-label="Dismiss" fontIcon="close"></mat-icon>
+        </div>
+    </button>
+    <div class="d-flex justify-content-center mt-2">
+        <button mat-flat-button color="warn" type="button" class="clear mb-0" (click)="messageService.clear()">
+            <mat-icon fontIcon="delete"></mat-icon> Limpar todas notificações
+        </button>
+    </div>
+</mat-menu>
+
+<!-- <div *ngIf="messageService.messages.length">
+
+    <h2>Avisos</h2>
+    
+    
+
+</div> -->
