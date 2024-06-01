@@ -14,6 +14,9 @@ In this lesson I already implemented Bootstrap to help with the responsive desig
 
 ![Lesson 2 image mobile](https://github.com/yanm1103/Angular-Tour-of-Heroes/assets/28579030/490b086d-1438-4158-8e8f-b42c0f5344c8)
 
+### Lesson 3 - Create a feature component
+This lesson just separates components, so no visual difference. Heroes component was divided into Heroes and HeroDetail
+
 
 ## Development server
 
