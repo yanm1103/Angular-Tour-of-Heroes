@@ -11,7 +11,7 @@ export const HEROES: Hero[] = [
   },
   {
     id: 1,
-    name: 'Storm',
+    name: 'Tempestade',
     power: 'Controla o tempo, voar',
     age: 30,
     birthdate: new Date('1993-09-03'),
@@ -22,7 +22,6 @@ export const HEROES: Hero[] = [
     name: 'Wolverine',
     power: 'Esqueleto de Adamantium, fator regenerativo',
     age: 130, // Estimated age, comics don't provide an exact age
-    birthdate: new Date('1890-01-01'), // Placeholder, actual birthdate unknown
     imageURL: 'https://avatarfiles.alphacoders.com/296/296038.jpg'
   },
   {
@@ -30,7 +29,21 @@ export const HEROES: Hero[] = [
     name: 'Mulher Maravilha',
     power: 'Super força, habilidades mágicas',
     age: 1200, // Estimated age, Amazonians age slowly
-    birthdate: new Date('840-01-01'), // Placeholder, actual birthdate unknown
     imageURL: 'https://i.pinimg.com/736x/73/7c/58/737c58eb64bed0b2ce737141ba088be0.jpg'
-  }
+  },
+  {
+    id: 4,
+    name: 'Gelado',
+    power: 'Soltar gelo',
+    age: 40,
+    birthdate: new Date('1964-06-11'),
+    imageURL: 'https://pm1.aminoapps.com/6907/200daccb0dcd499bb9146ba478786d1e26afdbc0r1-600-600v2_00.jpg'
+  },
+  {
+    id: 5,
+    name: 'Homelander',
+    power: 'Super força, voar, visão de calor',
+    age: 41,
+    imageURL: 'https://variety.com/wp-content/uploads/2023/11/homelander.jpg'
+  },
 ];
