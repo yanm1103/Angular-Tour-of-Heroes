@@ -59,3 +59,15 @@
     text-align: center;
     font-size: 2.5rem;
 }
+@media screen and (max-width: 400px) {
+    .slideBtn {
+        display: none;
+    }
+    .heroName {
+        width: 200px;
+    }
+    .heroPic {
+        width: 200px;
+        height: 300px;
+    }
+}

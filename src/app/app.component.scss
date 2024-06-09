@@ -2,68 +2,10 @@
 
 @font-face {
   font-family: 'Bangers';
-  /* Replace with your font's actual name */
   src: url('../assets/Bangers-Regular.ttf') format('truetype');
 }
 
-h1 {
-  color: #369;
-  font-family: 'Bangers', sans-serif;
-  /* Include a fallback font */
-  font-size: 250%;
-  padding: 10px;
-}
-
-h2,
-h3 {
-  color: #444;
-  font-family: 'Bangers', sans-serif;
-  /* Include a fallback font */
-  font-weight: lighter;
-}
-
-body {
-  height: 100%;
-  margin: 2em;
-}
-
-body,
-input[type="text"],
-button {
-  color: #333;
-  font-family: Cambria, Georgia, serif;
-}
-
-button {
-  background-color: #eee;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  color: black;
-  font-size: 1.2rem;
-  padding: 1rem;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-}
-
-button:hover {
-  background-color: black;
-  color: white;
-}
-
-button:disabled {
-  background-color: #eee;
-  color: #aaa;
-  cursor: auto;
-}
-
-/* everywhere else */
-* {
-  font-family: 'Bangers', sans-serif;
-  /* Include a fallback font */
-}
-
 .logo {
-  height: 50px;
+  height: 60px;
+  cursor: pointer;
 }

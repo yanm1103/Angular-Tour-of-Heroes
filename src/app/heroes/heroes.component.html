@@ -11,7 +11,7 @@
                 <mat-icon fontIcon="chevron_right"></mat-icon>
             </button>
             <div #heroesCarousel id="heroesCarousel" class="heroesCarousel">
-                <div class="heroCard" *ngFor="let hero of heroList" (click)="onSelect(hero)">
+                <div class="heroCard" *ngFor="let hero of heroList" routerLink="/detail/{{hero.id}}">
                     <div class="heroPicContainer">
                         <div class="heroPic" [ngStyle]="{'background-image': 'url(' + hero.imageURL + ')'}"></div>
                     </div>
@@ -20,5 +20,4 @@
             </div>
         </div>
     </div>
-    <app-hero-detail [selectedHero]="selectedHero"></app-hero-detail>
 </div>

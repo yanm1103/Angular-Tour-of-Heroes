@@ -1,12 +1,28 @@
-<mat-toolbar class="d-flex justify-content-between" color="primary">
-    <!-- <span>{{title}}</span> -->
-    <div></div>
+<!-- PC -->
+<mat-toolbar class="d-none d-sm-flex justify-content-between" color="primary">
+    <div routerLink="/heroes">
+        <img class="logo" src="/assets/logo.png">
+    </div>
     <div>
+        <button routerLink="/heroes" mat-flat-button color="primary">Heróis</button>
+        <button routerLink="/about" mat-flat-button color="primary">Sobre</button>
+    </div>
+    <app-messages></app-messages>
+</mat-toolbar>
+
+<!-- phone -->
+<mat-toolbar class="d-flex d-sm-none justify-content-between" color="primary">
+    <mat-icon fontIcon="menu" [matMenuTriggerFor]="menu"></mat-icon>
+    <mat-menu #menu="matMenu" color="primary">
+        <button routerLink="/heroes" mat-menu-item>Heróis</button>
+        <button routerLink="/about" mat-menu-item>Sobre</button>
+    </mat-menu>
+    <div routerLink="/heroes">
         <img class="logo" src="/assets/logo.png">
     </div>
     <app-messages></app-messages>
 </mat-toolbar>
 
-<app-heroes></app-heroes>
+<router-outlet></router-outlet>
 
 <app-footer></app-footer>
