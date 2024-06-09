@@ -8,6 +8,13 @@ Generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.
 
 ## Project images while still in production
 
+### Lesson 5 - Routing
+Spent this entire saturday (08/06/2024) messing with this thing. I guess it was worth it, I'm very happy with the results.
+
+![lesson5](https://github.com/yanm1103/Angular-Tour-of-Heroes/assets/28579030/10a454bd-d662-4d15-aff1-6933d0c344a7)
+
+![lesson5mobile](https://github.com/yanm1103/Angular-Tour-of-Heroes/assets/28579030/80747011-c06e-40aa-9ebf-d434e7aba1ac)
+
 ### Lesson 4 - Add services
 Even though this lesson is about services, I've decided to improve the visual of things a bit
 
