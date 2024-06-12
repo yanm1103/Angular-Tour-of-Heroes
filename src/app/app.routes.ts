@@ -5,8 +5,8 @@ import { AboutComponent } from './about/about.component';
 
 export const routes: Routes = [
     { path: 'heroes', component: HeroesComponent, title: "Tour of Heroes - Seleção de Herói" },
-    { path: 'detail/:id', component: HeroDetailComponent },
+    { path: 'detail/:id', component: HeroDetailComponent, title: "Tour of Heroes - Herói" },
     { path: 'detail', redirectTo: '/heroes', pathMatch: 'prefix' },
-    { path: 'about', component: AboutComponent },
+    { path: 'about', component: AboutComponent, title: 'Tour of Heroes - Sobre' },
     { path: '', redirectTo: '/heroes',  pathMatch: 'full'}
 ];

@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { provideNativeDateAdapter } from '@angular/material/core';
 import { RouterModule } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 // My stuff
 import { Hero } from '../hero';
@@ -37,11 +38,13 @@ export class HeroDetailComponent {
     private heroService: HeroService,
     public messageService: MessageService,
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
+    private Title: Title
   ) { }
 
   ngOnInit(): void {
     this.getHero();
+    this.Title.setTitle('Tour of Heroes - ' + (this.selectedHero ? this.selectedHero.name : 'carregando...'));
   }
 
   getHero(): void {
