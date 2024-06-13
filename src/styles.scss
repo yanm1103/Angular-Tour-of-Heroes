@@ -1,44 +1,49 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use "@angular/material" as mat;
-// Plus imports for other components in your app.
+
 @use "toh-palletes.scss" as toh;
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$angular-tour-of-heroes-primary: toh.$blue;
-
-$angular-tour-of-heroes-accent: toh.$orange;
-
-// The warn palette is optional (defaults to red).
-$angular-tour-of-heroes-warn: toh.$wine;
-
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-$angular-tour-of-heroes-theme: mat.m2-define-light-theme(
+$toh-typography: mat.m2-define-typography-config();
+$light-theme: mat.m2-define-light-theme(
   (
     color: (
-      primary: $angular-tour-of-heroes-primary,
-      accent: $angular-tour-of-heroes-accent,
-      warn: $angular-tour-of-heroes-warn
+      primary: toh.$blue,
+      accent: toh.$orange,
+      warn: toh.$wine,
     ),
-    typography: mat.m2-define-typography-config(),
+    typography: $toh-typography,
     density: 0,
   )
 );
 
-$angular-tour-of-heroes-background: #000;
+// Define the dark theme
+$dark-theme: mat.m2-define-dark-theme(
+  (
+    color: (
+      primary: toh.$blue,
+      accent: toh.$orange,
+      warn: toh.$wine,
+    ),
+    typography: $toh-typography,
+    density: 0,
+  )
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($angular-tour-of-heroes-theme);
-
+body, body.light {
+  @include mat.all-component-themes($light-theme);
+}
+body.dark {
+  @include mat.all-component-themes($dark-theme);
+  --bs-body-bg: #1a1a1a;
+  --bs-heading-color: white;
+  --bs-body-color: white;
+}
 /* You can add global styles to this file, and also import other style files */
 * {
   padding: 0;

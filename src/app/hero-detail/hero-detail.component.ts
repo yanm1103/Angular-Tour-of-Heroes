@@ -66,6 +66,6 @@ export class HeroDetailComponent {
     if (date) {
       let dateStr = date.toLocaleDateString();
       return dateStr;
-    } else return 'Data de nascimento desconhecida';
+    } else return '';
   }
 }

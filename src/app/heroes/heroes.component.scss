@@ -7,27 +7,16 @@
 }
 
 .slideBtn {
-    border-radius: 50%;
+    border-radius: 0px;
     width: 50px;
-    height: 60px;
+    height: 100px;
     display: flex;
-    margin-top: -50px;
     justify-content: center;
     align-items: center;
-    position: relative;
-    z-index: 1; // Positioning it over the heroes
+    transform: skew(-5deg, 0deg);
 }
 .slideBtn .mat-icon {
     margin: 0px;
-}
-
-.back {
-    top: 50%;
-    left: 0px;
-}
-.forward {
-    top: 43.5%;
-    left: 95%;
 }
 
 .heroCard {

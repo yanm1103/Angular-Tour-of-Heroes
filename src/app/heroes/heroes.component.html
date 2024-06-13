@@ -2,20 +2,30 @@
     <div class="row">
         <div class="col-12">
             <h1 class="text-center mt-3">Seleção de herói</h1>
-            <button (click)="sideScroll('left')" mat-flat-button color="accent" id="slideBack" class="slideBtn back"
-                type="button">
-                <mat-icon fontIcon="chevron_left"></mat-icon>
-            </button>
-            <button (click)="sideScroll('right')" mat-flat-button color="accent" id="slideForward"
-                class="slideBtn forward" type="button">
-                <mat-icon fontIcon="chevron_right"></mat-icon>
-            </button>
-            <div #heroesCarousel id="heroesCarousel" class="heroesCarousel">
-                <div class="heroCard" *ngFor="let hero of heroList" routerLink="/detail/{{hero.id}}">
-                    <div class="heroPicContainer">
-                        <div class="heroPic" [ngStyle]="{'background-image': 'url(' + hero.imageURL + ')'}"></div>
+            <div class="row">
+                <div class="col-1 d-flex align-items-center justify-content-end">
+                    <button (click)="sideScroll('left')" mat-flat-button color="accent" id="slideBack"
+                        class="slideBtn back" type="button">
+                        <mat-icon fontIcon="chevron_left"></mat-icon>
+                    </button>
+                </div>
+
+                <div class="col-10">
+                    <div #heroesCarousel id="heroesCarousel" class="heroesCarousel">
+                        <div class="heroCard" *ngFor="let hero of heroList" routerLink="/detail/{{ hero.id }}">
+                            <div class="heroPicContainer">
+                                <div class="heroPic" [ngStyle]="{ 'background-image': 'url(' + hero.imageURL + ')' }">
+                                </div>
+                            </div>
+                            <div class="heroName text-truncate">{{ hero.name }}</div>
+                        </div>
                     </div>
-                    <div class="heroName text-truncate">{{hero.name}}</div>
+                </div>
+                <div class="col-1 d-flex align-items-center justify-content-start">
+                    <button (click)="sideScroll('right')" mat-flat-button color="accent" id="slideForward"
+                        class="slideBtn forward" type="button">
+                        <mat-icon fontIcon="chevron_right"></mat-icon>
+                    </button>
                 </div>
             </div>
         </div>
