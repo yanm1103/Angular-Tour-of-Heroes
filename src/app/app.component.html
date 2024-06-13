@@ -1,13 +1,20 @@
 <!-- PC -->
 <mat-toolbar class="d-none d-sm-flex justify-content-between" color="primary">
-    <div routerLink="/heroes">
-        <img class="logo" src="/assets/logo.png">
+    <div class="d-flex align-items-center">
+        <div routerLink="/heroes">
+            <img class="logo" src="/assets/logo.png">
+        </div>
+        <div class="ms-3">
+            <button class="headerBtn" routerLink="/heroes" mat-flat-button color="primary">Heróis</button>
+            <button class="headerBtn" routerLink="/about" mat-flat-button color="primary">Sobre</button>
+        </div>
     </div>
     <div>
-        <button class="headerBtn" routerLink="/heroes" mat-flat-button color="primary">Heróis</button>
-        <button class="headerBtn" routerLink="/about" mat-flat-button color="primary">Sobre</button>
+        <button mat-icon-button (click)="this.themeService.switchTheme()" matTooltip="Alterar tema">
+            <mat-icon fontIcon="contrast"></mat-icon>
+        </button>
+        <app-messages matTooltip="Histórico"></app-messages>
     </div>
-    <app-messages></app-messages>
 </mat-toolbar>
 
 <!-- phone -->
@@ -16,6 +23,7 @@
     <mat-menu #menu="matMenu" color="primary">
         <button routerLink="/heroes" mat-menu-item>Heróis</button>
         <button routerLink="/about" mat-menu-item>Sobre</button>
+        <button (click)="this.themeService.switchTheme()" mat-menu-item>Alterar tema</button>
     </mat-menu>
     <div routerLink="/heroes">
         <img class="logo" src="/assets/logo.png">
