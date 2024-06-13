@@ -7,6 +7,16 @@ This is just a following of [Angular's tutorial](https://v17.angular.io/tutorial
 
 ## Production Updates
 
+### Material - Light and Dark theme switch 13/06/2024
+🇧🇷 A mudança de tema é salva no local storage.
+
+🇺🇸 Theme changes are saved in local storage.
+
+![Dark theme](https://github.com/yanm1103/Angular-Tour-of-Heroes/assets/28579030/1d4f55f1-c289-4214-bfa6-ae343a90bcb7)
+
+![Light theme](https://github.com/yanm1103/Angular-Tour-of-Heroes/assets/28579030/4e2373df-691b-4923-a3a8-123c956e231a)
+
+
 ### Material - Custom theme 13/06/2024
 🇧🇷 Finalmente entendi como criar paletas de cor em um tema customizado do Angular Material. Apliquei cores custom no projeto.
 
