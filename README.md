@@ -2,10 +2,27 @@
 
 ![logo](https://github.com/yanm1103/Angular-Tour-of-Heroes/assets/28579030/6139ab5e-150f-44e1-a3e4-071f988002ec)
 
-Seguindo o tutorial do Angular v17 em criar um app simples.
-This is just a following of [Angular's tutorial](https://v17.angular.io/tutorial/tour-of-heroes) on creating a simple app.
+🇧🇷 Seguindo o tutorial do Angular v17 em criar um app simples. Porém, eu modifiquei bastante coisa, principalmente visualmente.
 
-## Production Updates
+🇺🇸 This is just a step by step recreation of [Angular's tutorial](https://v17.angular.io/tutorial/tour-of-heroes) on creating a simple app. However, I modified a bunch of things, mainly visually.
+
+## Screenshots
+
+![image](https://github.com/yanm1103/Angular-Tour-of-Heroes/assets/28579030/be6be28c-093c-46cc-8b98-3844d4eb2a5b)
+
+![image](https://github.com/yanm1103/Angular-Tour-of-Heroes/assets/28579030/511419cd-9839-4f03-8356-ec987ee45fb5)
+
+![image](https://github.com/yanm1103/Angular-Tour-of-Heroes/assets/28579030/83b02de9-0723-4fc2-9e69-ac27ad3f7483)
+
+![image](https://github.com/yanm1103/Angular-Tour-of-Heroes/assets/28579030/56c35bb4-57f1-4203-a724-4b8faeabfe88)
+
+<details>
+  <summary><h3>Production Updates</h3></summary>
+
+### Final Lesson complete 15/06/2024
+🇧🇷 A última lição se tratava de implementar um servidor e fazer o request invés de puxar diretamente do front-end. Além disso, inseri uma barra de pesquisa de herói na tela inicial.
+
+🇺🇸 The last lesson was about implementing a server and making the request instead of fetching directly from the front end. Additionally, I added a hero search bar on the main screen.
 
 ### Material - Light and Dark theme switch 13/06/2024
 🇧🇷 A mudança de tema é salva no local storage.
@@ -56,6 +73,8 @@ This is just a following of [Angular's tutorial](https://v17.angular.io/tutorial
 
 ### Lesson 1 - The hero editor
 ![Lesson 1 image](https://i.imgur.com/yAjROyv.png)
+
+</details>
 
 ## Development server | Servidor de desenvolvimento
 Execute `ng serve` para iniciar o servidor de desenvolvimento. Navegue até `http://localhost:4200/`. A aplicação será recarregada automaticamente se você modificar qualquer um dos arquivos de origem.
