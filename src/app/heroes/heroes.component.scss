@@ -48,7 +48,10 @@
     text-align: center;
     font-size: 2.5rem;
 }
-@media screen and (max-width: 400px) {
+.searchbar {
+    width: 50%;
+}
+@media screen and (max-width: 575px) {
     .slideBtn {
         display: none;
     }
@@ -58,5 +61,8 @@
     .heroPic {
         width: 200px;
         height: 300px;
+    }
+    .searchbar {
+        width: 100%;
     }
 }

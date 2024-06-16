@@ -3,6 +3,6 @@ export interface Hero {
     name: string;
     power?: string;
     age?: number;
-    birthdate?: Date;
+    birthdate?: string;
     imageURL?: string;
 }

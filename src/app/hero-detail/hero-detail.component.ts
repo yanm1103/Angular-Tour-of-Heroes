@@ -49,8 +49,10 @@ export class HeroDetailComponent {
 
   getHero(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.heroService.getHero(id)
-      .subscribe(hero => this.selectedHero = hero);
+    this.heroService.getHeroCall(id).then((retrievedSelectedHero: Hero | undefined) => {
+      this.selectedHero = retrievedSelectedHero;
+      this.messageService.add(`Carregou herói ${this.selectedHero?.name}`);
+    });
   }
 
   // Returns the age of the hero in a string already formatted for view
@@ -62,9 +64,9 @@ export class HeroDetailComponent {
   }
 
   // Returns birthdate for view
-  formatDate(date?: Date): string {
+  formatDate(date?: string): string {
     if (date) {
-      let dateStr = date.toLocaleDateString();
+      let dateStr = new Date(date).toLocaleDateString();
       return dateStr;
     } else return '';
   }
