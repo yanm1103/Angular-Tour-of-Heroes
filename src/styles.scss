@@ -39,7 +39,7 @@ body, body.light {
   @include mat.all-component-themes($light-theme);
 }
 body.dark {
-  @include mat.all-component-themes($dark-theme);
+  @include mat.all-component-colors($dark-theme);
   --bs-body-bg: #1a1a1a;
   --bs-heading-color: white;
   --bs-body-color: white;

@@ -2,6 +2,18 @@
     <div class="row">
         <div class="col-12">
             <h1 class="text-center mt-3">Seleção de herói</h1>
+            <div class="d-flex justify-content-center mt-3">
+                <mat-form-field class="searchbar">
+                    <mat-icon matPrefix>search</mat-icon>
+                    <input color="primary" matInput type="text" [(ngModel)]="searchTerm" placeholder="Procurar herói..."
+                        (ngModelChange)="filterResults()">
+                    @if (searchTerm) {
+                    <button matSuffix mat-icon-button aria-label="Limpar" (click)="clearFilter()">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                    }
+                </mat-form-field>
+            </div>
             <div class="row">
                 <div class="col-1 d-flex align-items-center justify-content-end">
                     <button (click)="sideScroll('left')" mat-flat-button color="accent" id="slideBack"
@@ -12,13 +24,15 @@
 
                 <div class="col-10">
                     <div #heroesCarousel id="heroesCarousel" class="heroesCarousel">
-                        <div class="heroCard" *ngFor="let hero of heroList" routerLink="/detail/{{ hero.id }}">
+                        @for (hero of filteredHeroList; track hero.name) {
+                        <div class="heroCard" routerLink="/detail/{{ hero.id }}">
                             <div class="heroPicContainer">
                                 <div class="heroPic" [ngStyle]="{ 'background-image': 'url(' + hero.imageURL + ')' }">
                                 </div>
                             </div>
                             <div class="heroName text-truncate">{{ hero.name }}</div>
                         </div>
+                        }
                     </div>
                 </div>
                 <div class="col-1 d-flex align-items-center justify-content-start">
